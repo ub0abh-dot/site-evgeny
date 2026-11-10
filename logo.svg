@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <circle cx="120" cy="120" r="116" fill="#123021"/>
+  <circle cx="120" cy="120" r="104" fill="none" stroke="#C79E41" stroke-width="3"/>
+  <text x="120" y="138" text-anchor="middle" font-family="Montserrat, 'Segoe UI', Arial, sans-serif" font-weight="800" font-size="72" fill="#F7F5EE" letter-spacing="2">ЕВ</text>
+  <text x="120" y="168" text-anchor="middle" font-family="Montserrat, 'Segoe UI', Arial, sans-serif" font-weight="600" font-size="14" fill="#C79E41" letter-spacing="4">ВЕБ-ДИЗАЙН</text>
+</svg>
