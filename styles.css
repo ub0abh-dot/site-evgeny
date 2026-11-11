@@ -13,7 +13,20 @@ a{text-decoration:none;color:inherit}
 .sub{color:var(--mut);margin:8px 0 40px;max-width:640px}
 .section--dark .sub{color:#C9D4CC}
 .todo{background:var(--todo);border-radius:4px;padding:0 4px}
-.btn{display:inline-block;padding:14px 28px;border-radius:50px;font-weight:600;font-family:Montserrat,sans-serif;font-size:15px;transition:.25s;cursor:pointer;border:none;min-height:48px}
+.btn{display:inline-block;padding:14px 28px;border-radius:50px;font-weight:600;font-family:Montserrat,sans-serif;font-size:15px;transition:.25s;cursor:pointer;border:none;min-height:48px;position:relative;overflow:hidden}
+/* свечение — мягкий золотой ореол, дышит */
+.btn--gold{animation:glow 2.6s ease-in-out infinite}
+@keyframes glow{
+  0%,100%{box-shadow:0 0 0 0 rgba(199,158,65,.45),0 0 18px rgba(199,158,65,.35)}
+  50%{box-shadow:0 0 0 6px rgba(199,158,65,0),0 0 32px rgba(199,158,65,.55)}
+}
+/* волна — блик пробегает по кнопке */
+.btn--gold::after{content:"";position:absolute;top:-60%;left:-80%;width:45%;height:220%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);animation:wave 3.4s ease-in-out infinite}
+@keyframes wave{
+  0%,55%{left:-80%}
+  85%,100%{left:140%}
+}
+@media(prefers-reduced-motion:reduce){.btn--gold,.btn--gold::after{animation:none}}
 .btn--gold{background:var(--gold);color:var(--green)}
 .btn--gold:hover{background:var(--gold2);color:#fff;transform:translateY(-2px)}
 .btn--ghost{border:2px solid rgba(255,255,255,.6);color:#fff}
